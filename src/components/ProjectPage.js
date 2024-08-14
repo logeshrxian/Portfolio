@@ -22,6 +22,10 @@ const ProjectPage = ({ isVisible }) => {
           to create an engaging platform to buy products online. I focused on
           building dynamic and responsive user interfaces using React.
         </p>
+        <a href="https://github.com/logeshrxian/myproject" target="_blank" rel="noopener noreferrer" className="github-link">
+          <img className="github-logo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" />
+          <span>View on GitHub</span>
+        </a>
       </div>
       <div className={`project-card right-card ${animate ? 'animate-flip' : ''}`}>
         <h2>Project 2 😊</h2>
@@ -35,6 +39,10 @@ const ProjectPage = ({ isVisible }) => {
           performance, delivering a modern, user-centric interface that meets
           the highest standards of static web development.
         </p>
+        <a href="https://github.com/logeshrxian/Portfolio" target="_blank" rel="noopener noreferrer" className="github-link">
+          <img className="github-logo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" />
+          <span>View on GitHub</span>
+        </a>
       </div>
     </div>
   );

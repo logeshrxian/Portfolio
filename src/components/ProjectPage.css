@@ -18,6 +18,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transform-style: preserve-3d; /* Ensure 3D transformations are preserved */
   transition: transform 1s ease; /* Smooth transition for animations */
+  position: relative; /* For positioning elements inside the card */
 }
 
 .left-card, .right-card {
@@ -69,6 +70,24 @@ h1 {
   color: #ffffff; /* White color for text inside the cards */
 }
 
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between the logo and the text */
+  text-decoration: none;
+  color: #ffffff; /* White color for the text */
+  margin-top: 20px; /* Space above the GitHub link */
+  font-size: 1em; /* Font size for the text */
+}
+
+.github-logo {
+  width: 30px; /* Size of the GitHub logo */
+  height: 30px;
+  border-radius: 50%;
+ 
+}
+
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   .project-card {
@@ -97,6 +116,10 @@ h1 {
   .project-card p {
     font-size: 0.9em; /* Adjust font size for paragraph text */
   }
+
+  .github-link {
+    margin-top: 15px; /* Adjust space above the GitHub link */
+  }
 }
 
 @media (max-width: 425px) {
@@ -115,5 +138,9 @@ h1 {
 
   .project-card p {
     font-size: 0.8em; /* Further adjust font size for paragraph text */
+  }
+
+  .github-link {
+    margin-top: 10px; /* Adjust space above the GitHub link */
   }
 }

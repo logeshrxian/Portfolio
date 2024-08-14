@@ -17,7 +17,7 @@ const Footer = () => {
           <a href="https://web.whatsapp.com/" target="_blank" rel="noopener noreferrer" className="footer-icon">
             <img src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYUYXW_VBPFv8qyCqqsUNd5_p5FpjE7iPPmw&s`} alt="Whatsapp" />
           </a>
-          <a href="https://github.com/dashboard" target="_blank" rel="noopener noreferrer" className="footer-icon">
+          <a href="https://github.com/logeshrxian?tab=repositories" target="_blank" rel="noopener noreferrer" className="footer-icon">
             <img src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-77gHQ72UCeDITjNeQllasUa3lFBPOH_N8w&s`} alt="GitHub" />
           </a>
         </div>

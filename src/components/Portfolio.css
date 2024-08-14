@@ -1,0 +1,260 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the portfolio page */
+.portfolio-container {
+  background-color: #0c0e16;
+  color: #ffffff;
+  min-height: 100vh; /* Changed height to min-height for better flexibility */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure spacing for footer */
+}
+
+/* Header styling */
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Logo styling */
+.portfolio-logo {
+  width: 50px; /* Adjust the size as needed */
+  border-radius: 50%;
+}
+
+/* Navigation styling */
+.portfolio-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  margin-left: -50px; /* Move the navigation slightly to the left */
+}
+
+.portfolio-nav .nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s, transform 0.2s ease; /* Add transform transition */
+}
+
+/* Hover effect for links */
+.portfolio-nav .nav-link:hover {
+  color: #8a8aff; /* Highlight color for hover */
+  transform: translateY(-5px); /* Move up slightly on hover */
+}
+
+/* Main content styling */
+.portfolio-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding: 0 50px;
+}
+
+/* Info section styling */
+.portfolio-info {
+  max-width: 50%;
+}
+
+/* Info headings styling */
+.portfolio-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.portfolio-info h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.portfolio-info h3 {
+  font-size: 24px;
+  color: #aaaaaa;
+}
+
+/* Contact info styling */
+.contact-info {
+  margin: 20px 0;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+/* Titles and descriptions styling */
+.portfolio-title {
+  font-size: 18px;
+  color: #ffffff;
+  margin: 20px 0;
+}
+
+.portfolio-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Footer styling */
+.portfolio-footer {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Social icons styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 24px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:last-child {
+  margin-right: 0; /* Remove margin for the last icon */
+}
+
+.social-icons a:hover {
+  color: #8a8aff;
+}
+
+/* Image styling */
+.portfolio-image {
+  width: 30%;
+  animation: slideIn 2s ease-in-out forwards; /* Apply the animation */
+}
+
+.portfolio-image img {
+  width: 100%; /* Ensure the image takes full width of its container */
+  height: 400px; /* Increased height for the image */
+  object-fit: cover;
+}
+
+/* Animation for visibility */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0; /* Initially invisible */
+  }
+  50% {
+    opacity: 1; /* Fully visible at the halfway point */
+  }
+  100% {
+    transform: translateX(0); /* Move to the original position */
+  }
+}
+
+/* Responsive design for tablets and smaller screens */
+@media (max-width: 768px) {
+  .portfolio-main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* Reduce side padding */
+  }
+
+  .portfolio-image {
+    margin-top: 20px;
+    width: 80%; /* Adjust width for smaller screens */
+  }
+
+  .portfolio-info {
+    max-width: 90%;
+  }
+}
+
+/* Responsive design for very small screens */
+@media (max-width: 480px) {
+  .portfolio-info h1 {
+    font-size: 48px; /* Adjust font size for smaller screens */
+  }
+
+  .portfolio-info h2 {
+    font-size: 20px;
+  }
+
+  .portfolio-info h3 {
+    font-size: 20px;
+  }
+
+  .portfolio-description {
+    font-size: 14px;
+  }
+
+  .portfolio-nav ul {
+    gap: 10px;
+  }
+
+  .portfolio-nav a {
+    font-size: 12px; /* Reduce font size for navigation links */
+  }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 325px) {
+  .portfolio-info h1 {
+    font-size: 36px; /* Further adjust font size for very small screens */
+  }
+
+  .portfolio-info h2 {
+    font-size: 18px;
+  }
+
+  .portfolio-info h3 {
+    font-size: 18px;
+  }
+
+  .portfolio-description {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  .contact-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .portfolio-image img {
+    height: 300px; /* Adjust image height for very small screens */
+  }
+
+  .portfolio-nav a {
+    font-size: 10px; /* Further reduce font size for navigation links */
+  }
+
+  .portfolio-main {
+    padding: 0 10px; /* Further reduce padding for very small screens */
+  }
+}

@@ -1,0 +1,75 @@
+.me-page {
+  padding: 50px;
+  background-color: #0c0e16; /* Set the background color to #0c0e16 */
+  color: #ffffff; /* Set the default text color to white for the entire section */
+  text-align: center; /* Center align text within the section */
+}
+
+.me-page h1 {
+  margin-bottom: 40px;
+  color: #ffffff; /* Set the h1 color to white */
+}
+
+.me-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the flex items */
+  align-items: stretch; /* Ensure all columns stretch equally */
+}
+
+.me-column {
+  flex: 1;
+  min-width: 250px; /* Reduced min width */
+  max-width: 300px; /* Reduced max width */
+  margin: 10px; /* Reduced margin */
+  padding: 15px; /* Reduced padding */
+  background-color: #ffffff; /* Set container background to white */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #000000; /* Set text color within containers to black */
+  transform-style: preserve-3d; /* Ensure 3D transformations are preserved */
+  animation: blinkingStar 2s infinite; /* Apply blinking animation */
+  text-align: left; /* Align text within columns to the left */
+}
+
+/* Blinking star animation */
+@keyframes blinkingStar {
+  0%, 100% {
+    opacity: 1; /* Fully opaque at the start and end */
+  }
+  50% {
+    opacity: 0.5; /* Semi-transparent at the midpoint */
+  }
+}
+
+/* Optional: Stagger the animation for each card */
+.me-column:nth-child(1) {
+  animation-delay: 0s; /* No delay for the first card */
+}
+
+.me-column:nth-child(2) {
+  animation-delay: 0.5s; /* Delay for the second card */
+}
+
+.me-column:nth-child(3) {
+  animation-delay: 1s; /* Delay for the third card */
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.skill img {
+  width: 50px;
+  margin-bottom: 5px;
+}

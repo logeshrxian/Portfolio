@@ -1,0 +1,119 @@
+.project-page {
+  background-color: #0c0e16; /* Navy color for the entire page */
+  padding: 20px;
+  text-align: center;
+  min-height: 100vh; /* Ensures the page takes the full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  width: 40%;
+  margin: 20px auto;
+  padding: 40px; /* Increased padding for more height */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d; /* Ensure 3D transformations are preserved */
+  transition: transform 1s ease; /* Smooth transition for animations */
+}
+
+.left-card, .right-card {
+  opacity: 0; /* Start hidden */
+}
+
+.left-card.in-view {
+  background-color: #87ceeb; /* Sky blue color for Project 1 card */
+  animation: slideInLeft 1s forwards; /* Play animation forwards only once */
+}
+
+.right-card.in-view {
+  background-color: #90ee90; /* Light green color for Project 2 card */
+  animation: slideInRight 1s forwards; /* Play animation forwards only once */
+}
+
+/* Slide-in from left animation */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%); /* Start from off-screen left */
+    opacity: 0; /* Start with full transparency */
+  }
+  to {
+    transform: translateX(0); /* Slide to the center */
+    opacity: 1; /* Fully opaque */
+  }
+}
+
+/* Slide-in from right animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); /* Start from off-screen right */
+    opacity: 0; /* Start with full transparency */
+  }
+  to {
+    transform: translateX(0); /* Slide to the center */
+    opacity: 1; /* Fully opaque */
+  }
+}
+
+h1 {
+  color: #ffffff; /* White color for the main heading */
+  margin-bottom: 40px;
+}
+
+.project-card h2,
+.project-card p,
+.project-card h3 {
+  color: #ffffff; /* White color for text inside the cards */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .project-card {
+    width: 60%; /* Adjust width for tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    width: 80%; /* Adjust width for small screens */
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  h1 {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+  }
+
+  .project-card h2 {
+    font-size: 1.2em; /* Adjust font size for card titles */
+  }
+
+  .project-card h3 {
+    font-size: 1em; /* Adjust font size for project descriptions */
+  }
+
+  .project-card p {
+    font-size: 0.9em; /* Adjust font size for paragraph text */
+  }
+}
+
+@media (max-width: 425px) {
+  .project-card {
+    width: 90%; /* Adjust width for very small screens */
+    padding: 15px; /* Further reduce padding for small screens */
+  }
+
+  .project-card h2 {
+    font-size: 1em; /* Further adjust font size for very small screens */
+  }
+
+  .project-card h3 {
+    font-size: 0.9em; /* Further adjust font size for project descriptions */
+  }
+
+  .project-card p {
+    font-size: 0.8em; /* Further adjust font size for paragraph text */
+  }
+}
